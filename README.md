@@ -1,1 +1,18 @@
 # REAL-TIME-COLLABORATIVE-DOCUMENT-EDITOR-task-3
+
+
+ **COMPANY**: CODTECH IT SOLUTIONS
+ 
+ **NAME**: DIKSHITH M Y
+ 
+ **INTERN ID**:CT08LXT
+ 
+ **DOMAIN**: Full Stack Web Development
+ 
+ **BATCH DURATION**:m January 15th, 2025 to February 15th, 2025
+ 
+ **MENTOR NAME**:Neela Santhosh Kumar 
+
+**DESCRIPTION OF TASKS PERFORMED**  
+
+
