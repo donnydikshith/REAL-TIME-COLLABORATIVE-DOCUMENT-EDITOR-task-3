@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #editor {
+            width: 80%;
+            height: 400px;
+            border: 2px solid #333;
+            background: #fff;
+            padding: 10px;
+            outline: none;
+            font-size: 16px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="editor" contenteditable="true">Start typing...</div>
+
+    <script>
+        const editor = document.getElementById("editor");
+
+        // Load saved content from localStorage
+        editor.innerHTML = localStorage.getItem("editorContent") || "Start typing...";
+
+        // Save changes in real-time
+        editor.addEventListener("input", () => {
+            localStorage.setItem("editorContent", editor.innerHTML);
+        });
+
+        // Simulate real-time collaboration (only works on the same browser)
+        window.addEventListener("storage", (event) => {
+            if (event.key === "editorContent") {
+                editor.innerHTML = event.newValue;
+            }
+        });
+    </script>
+
+</body>
+</html>
